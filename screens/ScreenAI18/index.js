@@ -1,21 +1,30 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Switch, StyleSheet } from 'react-native';
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, Switch, StyleSheet, TextInput } from "react-native";
 
 const ListingAgentScreen = () => {
   const [emailNotification, setEmailNotification] = useState(true);
   const [textNotification, setTextNotification] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobilePhone, setMobilePhone] = useState('');
+
+  const handleAddSeller = () => {// Add seller logic here
+  };
+
   return <View style={styles.container}>
       <TouchableOpacity style={styles.backButton}>
         <Text style={styles.backButtonText}>Back</Text>
       </TouchableOpacity>
-      <Text style={styles.title}>Add a Listing Agent</Text>
+      <Text style={styles.title}>{"Add a Seller"}</Text>
       <Text style={styles.description}>
-        Add a listing agent to the property to have full access.
+        Enter the information below to add a seller to the property. The seller will not receive any invitation or notification until they receive an offer.
       </Text>
-      <View style={styles.dropdownContainer}>
-        <Text style={styles.dropdownLabel}>Listing Agent</Text>
-        <Text style={styles.dropdownValue}>John Doe</Text>
-      </View>
+      <Text style={styles.label}>Name</Text>
+      <TextInput style={styles.input} value={name} onChangeText={setName} placeholder="Enter name" />
+      <Text style={styles.label}>Email</Text>
+      <TextInput style={styles.input} value={email} onChangeText={setEmail} placeholder="Enter email" />
+      <Text style={styles.label}>Mobile Phone</Text>
+      <TextInput style={styles.input} value={mobilePhone} onChangeText={setMobilePhone} placeholder="Enter mobile phone" />
       <View style={styles.notificationContainer}>
         <Text style={styles.notificationLabel}>
           Notify By Email For New Offer
@@ -28,8 +37,8 @@ const ListingAgentScreen = () => {
         </Text>
         <Switch value={textNotification} onValueChange={setTextNotification} />
       </View>
-      <TouchableOpacity style={styles.addButton}>
-        <Text style={styles.addButtonText}>Add a Listing Agent</Text>
+      <TouchableOpacity style={styles.addButton} onPress={handleAddSeller}>
+        <Text style={styles.addButtonText}>Add a Seller</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.closeButton}>
         <Text style={styles.closeButtonText}>Close</Text>
@@ -40,22 +49,22 @@ const ListingAgentScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     paddingHorizontal: 20,
     paddingTop: 50
   },
   backButton: {
-    position: 'absolute',
+    position: "absolute",
     top: 50,
     left: 20
   },
   backButtonText: {
     fontSize: 16,
-    color: '#007AFF'
+    color: "#007AFF"
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: 50,
     marginBottom: 20
   },
@@ -63,22 +72,20 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 30
   },
-  dropdownContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  label: {
+    fontSize: 16,
+    marginBottom: 10
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 5,
+    padding: 10,
     marginBottom: 20
   },
-  dropdownLabel: {
-    flex: 1,
-    fontSize: 16
-  },
-  dropdownValue: {
-    fontSize: 16,
-    color: '#007AFF'
-  },
   notificationContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 20
   },
   notificationLabel: {
@@ -86,29 +93,29 @@ const styles = StyleSheet.create({
     fontSize: 16
   },
   addButton: {
-    backgroundColor: '#007AFF',
+    backgroundColor: "#007AFF",
     borderRadius: 10,
     paddingVertical: 15,
-    alignItems: 'center',
+    alignItems: "center",
     marginBottom: 20
   },
   addButtonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
-    fontWeight: 'bold'
+    fontWeight: "bold"
   },
   closeButton: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#007AFF',
+    borderColor: "#007AFF",
     paddingVertical: 15,
-    alignItems: 'center'
+    alignItems: "center"
   },
   closeButtonText: {
-    color: '#007AFF',
+    color: "#007AFF",
     fontSize: 16,
-    fontWeight: 'bold'
+    fontWeight: "bold"
   }
 });
 export default ListingAgentScreen;

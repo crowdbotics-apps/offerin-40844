@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Switch, StyleSheet } from 'react-native';
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, Switch, StyleSheet } from "react-native";
 
 const ListingAgentScreen = () => {
   const [emailNotification, setEmailNotification] = useState(true);
@@ -38,22 +38,22 @@ const ListingAgentScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     paddingHorizontal: 20,
     paddingTop: 50
   },
   backButton: {
-    position: 'absolute',
+    position: "absolute",
     top: 50,
     left: 20
   },
   backButtonText: {
     fontSize: 16,
-    color: '#007AFF'
+    color: "#007AFF"
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: 50,
     marginBottom: 20
   },
@@ -70,41 +70,41 @@ const styles = StyleSheet.create({
   },
   dropdown: {
     borderWidth: 1,
-    borderColor: '#C7C7CC',
+    borderColor: "#C7C7CC",
     borderRadius: 5,
     padding: 10
   },
   dropdownText: {
     fontSize: 16,
-    color: '#C7C7CC'
+    color: "#C7C7CC"
   },
   checkboxContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 20
   },
   addButton: {
-    backgroundColor: '#007AFF',
+    backgroundColor: "#007AFF",
     borderRadius: 5,
     paddingVertical: 15,
-    alignItems: 'center',
+    alignItems: "center",
     marginBottom: 20
   },
   addButtonText: {
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#fff'
+    fontWeight: "bold",
+    color: "#fff"
   },
   closeButton: {
-    backgroundColor: '#C7C7CC',
+    backgroundColor: "#C7C7CC",
     borderRadius: 5,
     paddingVertical: 15,
-    alignItems: 'center'
+    alignItems: "center"
   },
   closeButtonText: {
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#fff'
+    fontWeight: "bold",
+    color: "#fff"
   }
 });
 export default ListingAgentScreen;
