@@ -1,13 +1,18 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
 const ProfileScreen = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <View style={styles.header}>
         <Image style={styles.profileImage} source={{
         uri: 'https://tinyurl.com/42evm3m3'
       }} />
-        <Text style={styles.username}>John Doe</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI38");
+      }}><Text style={styles.username}>John Doe</Text></Pressable>
         <Text style={styles.userType}>Premium User</Text>
       </View>
       <View style={styles.content}>
