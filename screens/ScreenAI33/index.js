@@ -11,7 +11,9 @@ const ProfileScreen = () => {
   const [smsNotifications, setSmsNotifications] = useState(false);
   return <View style={_styles.sQbdgGOf}>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Edit Profile</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI35");
+      }}><Text style={styles.buttonText}>{"Log Out"}</Text></Pressable>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Subscription</Text>
