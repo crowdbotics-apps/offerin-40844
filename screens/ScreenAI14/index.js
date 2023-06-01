@@ -13,7 +13,9 @@ const ScreenComponent = () => {
         uri: 'https://tinyurl.com/42evm3m3'
       }} style={styles.notificationIcon} />
         <TouchableOpacity style={styles.logoutButton}>
-          <Text style={styles.logoutButtonText}>Logout</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI35");
+        }}><Text style={styles.logoutButtonText}>Logout</Text></Pressable>
         </TouchableOpacity>
       </View>
       <View style={styles.topLeft}>
@@ -55,17 +57,19 @@ const ScreenComponent = () => {
       }}><Text style={styles.caynvQcE}>{"Settings"}</Text></Pressable><Pressable onPress={() => {
         navigation.navigate("ScreenAI52");
       }}><Text style={styles.WXNejSZF}>{"Search"}</Text></Pressable></View>
-      <View style={styles.bottomNavigation}>
+      <Pressable onPress={() => {
+      navigation.navigate("ScreenAI21");
+    }}><View style={styles.bottomNavigation}>
         <Image source={{
-        uri: 'https://tinyurl.com/42evm3m3'
-      }} style={styles.homeIcon} />
+          uri: 'https://tinyurl.com/42evm3m3'
+        }} style={styles.homeIcon} />
         <Image source={{
-        uri: 'https://tinyurl.com/42evm3m3'
-      }} style={styles.settingsIcon} />
+          uri: 'https://tinyurl.com/42evm3m3'
+        }} style={styles.settingsIcon} />
         <Image source={{
-        uri: 'https://tinyurl.com/42evm3m3'
-      }} style={styles.paymentIcon} />
-      </View>
+          uri: 'https://tinyurl.com/42evm3m3'
+        }} style={styles.paymentIcon} />
+      </View></Pressable>
     </View>;
 };
 
