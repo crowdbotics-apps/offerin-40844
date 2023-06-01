@@ -1,15 +1,22 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { Text } from "react-native";
 import React from "react";
 import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
 const Untitled1 = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><Text style={styles.EzkLTXZp}>{"Select User Type"}</Text><Text style={styles.xavCelRr}>{"Login"}</Text><Text style={styles.cahvTMHI}>{"Sign Up For Free"}</Text><Text style={styles.tgkpTkyq}>{"About us"}</Text><Text style={styles.GjLdfHxW}>{"FAQ"}</Text><Text style={styles.RMbOdBoo}>{" Search Bar "}</Text><Text style={styles.lFlMFWXh}>{"Contact us"}</Text><Text style={styles.TKvXLbSW}>{"Dashboard"}</Text></ScrollView>
+    }}><Pressable onPress={() => {
+        navigation.navigate("ScreenAI3");
+      }}><Text style={styles.EzkLTXZp}>{"Select User Type"}</Text></Pressable><Text style={styles.xavCelRr}>{"Login"}</Text><Text style={styles.cahvTMHI}>{"Sign Up For Free"}</Text><Pressable onPress={() => {
+        navigation.navigate("ScreenAI5");
+      }}><Text style={styles.tgkpTkyq}>{"About us"}</Text></Pressable><Text style={styles.GjLdfHxW}>{"FAQ"}</Text><Text style={styles.RMbOdBoo}>{" Search Bar "}</Text><Text style={styles.lFlMFWXh}>{"Contact us"}</Text><Text style={styles.TKvXLbSW}>{"Dashboard"}</Text></ScrollView>
     </SafeAreaView>;
 };
 
