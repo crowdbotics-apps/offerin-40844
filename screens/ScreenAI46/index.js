@@ -41,7 +41,9 @@ const PaymentScreen = () => {
           </View>
         </View>
         <TouchableOpacity style={_styles.UJAlLSVl} onPress={() => setShowConfirmation(true)}>
-          <Text style={_styles.gCddOjUT}>Pay</Text>
+          <Pressable onPress={() => {
+            navigation.navigate("ScreenAI45");
+          }}><Text style={_styles.gCddOjUT}>Pay</Text></Pressable>
         </TouchableOpacity>
         <TouchableOpacity style={_styles.MIagmLsj}>
           <Text style={_styles.YmOQDRmj}>Paypal</Text>
