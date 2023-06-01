@@ -22,7 +22,9 @@ const PropertyOfferScreen = () => {
         <Text style={styles.buttonText}>Share</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Edit Offer</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI25");
+      }}><Text style={styles.buttonText}>Edit Offer</Text></Pressable>
       </TouchableOpacity>
       <View style={styles.actionMenu}>
         <Text style={styles.actionMenuText}>Action Menu</Text>
