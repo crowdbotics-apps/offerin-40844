@@ -19,7 +19,9 @@ const SignUpScreen = () => {
         </View>
         <View style={styles.checkboxContainer}>
           <TouchableOpacity style={styles.checkbox} />
-          <Text style={styles.checkboxText}>Remember me</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("privacyPolicy");
+        }}><Text style={styles.checkboxText}>Remember me</Text></Pressable>
         </View>
       </View>
       <TouchableOpacity style={styles.button}>
