@@ -1,8 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Switch } from 'react-native';
 
 const ProfileScreen = () => {
+  const navigation = useNavigation();
   const [notifications, setNotifications] = useState(false);
   const [emailNotifications, setEmailNotifications] = useState(false);
   const [smsNotifications, setSmsNotifications] = useState(false);
@@ -35,7 +38,9 @@ const ProfileScreen = () => {
         <Text style={styles.buttonText}>Terms and Conditions</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Change password</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI34");
+      }}><Text style={styles.buttonText}>Change password</Text></Pressable>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Contact-us</Text>

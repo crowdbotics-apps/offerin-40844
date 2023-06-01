@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <View style={styles.topRight}>
         <Text style={styles.welcomeText}>Welcome, John Doe</Text>
@@ -45,7 +48,9 @@ const ScreenComponent = () => {
         <TouchableOpacity style={styles.requestButton}>
           <Text style={styles.requestButtonText}>Request Highest & Best Offer</Text>
         </TouchableOpacity>
-      </View>
+      <Pressable onPress={() => {
+        navigation.navigate("ScreenAI33");
+      }}><Text style={styles.caynvQcE}>{"Settings"}</Text></Pressable></View>
       <View style={styles.bottomNavigation}>
         <Image source={{
         uri: 'https://tinyurl.com/42evm3m3'
@@ -206,6 +211,13 @@ const styles = StyleSheet.create({
   paymentIcon: {
     width: 20,
     height: 20
+  },
+  caynvQcE: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default ScreenComponent;
