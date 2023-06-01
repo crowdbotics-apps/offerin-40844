@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, CheckBox } from 'react-native';
 
 const SignInScreen = () => {
+  const navigation = useNavigation();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -17,7 +20,9 @@ const SignInScreen = () => {
       }} style={styles.logo} />
         <Text style={styles.logoText}>Sign In</Text>
       </View>
-      <View style={styles.inputContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("ScreenAI9");
+    }}><View style={styles.inputContainer}>
         <TextInput style={styles.input} placeholder="Full Name" value={fullName} onChangeText={setFullName} />
         <TextInput style={styles.input} placeholder="Email" value={email} onChangeText={setEmail} />
         <TextInput style={styles.input} placeholder="Password" value={password} onChangeText={setPassword} secureTextEntry={true} />
@@ -28,7 +33,7 @@ const SignInScreen = () => {
         <TouchableOpacity>
           <Text style={styles.forgotPassword}>Forgot password?</Text>
         </TouchableOpacity>
-      </View>
+      </View></Pressable>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.signInButton} onPress={handleSignIn}>
           <Text style={styles.signInButtonText}>Sign In</Text>
