@@ -24,7 +24,9 @@ const ProfileScreen = () => {
       }}><Text style={styles.buttonText}>{"Account Settings 2"}</Text></Pressable>
       </TouchableOpacity>
       <View style={styles.toggleContainer}>
-        <Text style={styles.toggleText}>Notifications</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI50");
+      }}><Text style={styles.toggleText}>Notifications</Text></Pressable>
         <Switch value={notifications} onValueChange={value => setNotifications(value)} />
       </View>
       <View style={styles.toggleContainer}>

@@ -29,7 +29,9 @@ const ProfileScreen = () => {
           <Text style={styles.sectionText}>10%</Text>
         </View>
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Users</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI43");
+        }}><Text style={styles.sectionTitle}>Users</Text></Pressable>
           <Text style={styles.sectionText}>500</Text>
         </View>
         <View style={styles.section}>

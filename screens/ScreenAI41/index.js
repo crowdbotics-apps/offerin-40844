@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 const CommissionScreen = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <TouchableOpacity style={styles.backButton}>
         <Image source={{
@@ -16,7 +19,9 @@ const CommissionScreen = () => {
         Changes made here do NOT impact commissions on existing properties or offers. To change the commission structure on existing properties or offers, make the changes directly on those elements.
       </Text>
       <TouchableOpacity style={styles.addButton}>
-        <Text style={styles.addButtonText}>Add Commission Structure</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI42");
+      }}><Text style={styles.addButtonText}>Add Commission Structure</Text></Pressable>
       </TouchableOpacity>
     </View>;
 };
