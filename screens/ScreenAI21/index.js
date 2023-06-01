@@ -11,7 +11,9 @@ const PropertyOfferScreen = () => {
         <Text style={styles.headerText}>Submission date</Text>
       </View>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Activity Log</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI27");
+      }}><Text style={styles.buttonText}>Activity Log</Text></Pressable>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Pressable onPress={() => {
