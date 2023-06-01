@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
 const SignUpScreen = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <Text style={styles.title}>Sign up For Free</Text>
       <View style={styles.inputContainer}>
@@ -10,7 +13,9 @@ const SignUpScreen = () => {
         <TextInput style={styles.input} placeholder="Create password" secureTextEntry={true} />
         <View style={styles.checkboxContainer}>
           <TouchableOpacity style={styles.checkbox} />
-          <Text style={styles.checkboxText}>I have read Terms and Conditions and Privacy Policy</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("termsAndConditions");
+        }}><Text style={styles.checkboxText}>I have read Terms and Conditions and Privacy Policy</Text></Pressable>
         </View>
         <View style={styles.checkboxContainer}>
           <TouchableOpacity style={styles.checkbox} />
