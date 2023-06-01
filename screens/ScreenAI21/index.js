@@ -33,7 +33,9 @@ const PropertyOfferScreen = () => {
         <Text style={styles.buttonText}>Email User</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Request Highest &amp; best offer</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI24");
+      }}><Text style={styles.buttonText}>Request Highest &amp; best offer</Text></Pressable>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Generate PDF Document</Text>
