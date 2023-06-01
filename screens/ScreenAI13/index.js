@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, Switch, StyleSheet } from 'react-native';
 
 const ProfileScreen = () => {
+  const navigation = useNavigation();
   const [isEditMode, setIsEditMode] = useState(false);
   const [fullName, setFullName] = useState('John Doe');
   const [username, setUsername] = useState('');
@@ -28,7 +31,9 @@ const ProfileScreen = () => {
       uri: 'https://tinyurl.com/42evm3m3'
     }} style={styles.profileImage} />
       <TouchableOpacity style={styles.editProfileButton} onPress={() => setIsEditMode(true)}>
-        <Text style={styles.editProfileButtonText}>Edit</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("Camera");
+      }}><Text style={styles.editProfileButtonText}>Edit</Text></Pressable>
       </TouchableOpacity>
       <View style={styles.profileStatsContainer}>
         <Text style={styles.profileStat}>100 Posts</Text>
@@ -38,7 +43,7 @@ const ProfileScreen = () => {
       {isEditMode ? <TouchableOpacity style={styles.saveChangesButton} onPress={handleSaveChanges}>
           <Text style={styles.saveChangesButtonText}>Save</Text>
         </TouchableOpacity> : null}
-      <View style={styles.profileInfoContainer}>
+      <Pressable><View style={styles.profileInfoContainer}>
         <Text style={styles.label}>Full Name *</Text>
         <TextInput style={styles.input} value={fullName} onChangeText={setFullName} editable={isEditMode} />
         <Text style={styles.label}>Username</Text>
@@ -81,7 +86,7 @@ const ProfileScreen = () => {
         <TextInput style={styles.input} value={zipCode} onChangeText={setZipCode} editable={isEditMode} />
         <TextInput style={styles.input} value={state} onChangeText={setState} editable={isEditMode} />
         <TextInput style={styles.input} value={country} onChangeText={setCountry} editable={isEditMode} />
-      </View>
+      </View></Pressable>
     </View>;
 };
 
