@@ -1,8 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, Switch, TouchableOpacity } from 'react-native';
 
 const NotificationSettingsScreen = () => {
+  const navigation = useNavigation();
   const [inAppNotifications, setInAppNotifications] = useState(true);
   const [emailNotifications, setEmailNotifications] = useState(false);
   const [notificationFrequency, setNotificationFrequency] = useState('daily');
@@ -57,7 +60,9 @@ const NotificationSettingsScreen = () => {
       <TouchableOpacity style={_styles.BizSzAIE} onPress={() => console.log('Go back')}>
         <Text>Back</Text>
       </TouchableOpacity>
-    </View>;
+    <Pressable onPress={() => {
+      navigation.navigate("ScreenAI51");
+    }}><Text style={_styles.OTfkxtMg}>{"Notifications"}</Text></Pressable></View>;
 };
 
 export default NotificationSettingsScreen;
@@ -93,5 +98,12 @@ const _styles = StyleSheet.create({
     backgroundColor: "#ccc",
     padding: 10,
     borderRadius: 5
+  },
+  OTfkxtMg: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
