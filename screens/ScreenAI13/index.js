@@ -87,7 +87,9 @@ const ProfileScreen = () => {
         <TextInput style={styles.input} value={state} onChangeText={setState} editable={isEditMode} />
         <TextInput style={styles.input} value={country} onChangeText={setCountry} editable={isEditMode} />
       </View></Pressable>
-    </View>;
+    <Text style={styles.cMLCKJWw}>Lorem ipsum…</Text><Pressable onPress={() => {
+      navigation.navigate("ScreenAI14");
+    }}><Text style={styles.HNlZAMoJ}>{"Save"}</Text></Pressable></View>;
 };
 
 const styles = StyleSheet.create({
@@ -179,6 +181,20 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold'
+  },
+  cMLCKJWw: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  HNlZAMoJ: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default ProfileScreen;
