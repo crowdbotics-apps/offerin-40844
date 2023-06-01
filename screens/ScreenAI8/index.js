@@ -34,9 +34,13 @@ const SignInScreen = () => {
           <Text style={styles.forgotPassword}>Forgot password?</Text>
         </TouchableOpacity>
       </View></Pressable>
-      <View style={styles.buttonContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("ScreenAI14");
+    }}><View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.signInButton} onPress={handleSignIn}>
-          <Text style={styles.signInButtonText}>Sign In</Text>
+          <Pressable onPress={() => {
+            navigation.navigate("ScreenAI13");
+          }}><Text style={styles.signInButtonText}>Sign In</Text></Pressable>
         </TouchableOpacity>
         <TouchableOpacity style={styles.googleButton}>
           <Text style={styles.googleButtonText}>Sign in via Google</Text>
@@ -44,7 +48,7 @@ const SignInScreen = () => {
         <TouchableOpacity style={styles.facebookButton}>
           <Text style={styles.facebookButtonText}>Sign in via Facebook</Text>
         </TouchableOpacity>
-      </View>
+      </View></Pressable>
     </View>;
 };
 
