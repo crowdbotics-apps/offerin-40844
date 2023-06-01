@@ -75,7 +75,9 @@ const AddPropertyScreen = () => {
             </TouchableOpacity>
           </View>)}
       </View>
-    </ScrollView>;
+    <Text style={styles.Rwxctpor}>Lorem ipsum…</Text><Text style={styles.YzDqgQHm}>Lorem ipsum…</Text><Pressable onPress={() => {
+      navigation.navigate("ScreenAI19");
+    }}><Text style={styles.tCWNLqNq}>{"Add a Listing gent"}</Text></Pressable></ScrollView>;
 };
 
 const styles = StyleSheet.create({
@@ -149,6 +151,27 @@ const styles = StyleSheet.create({
     backgroundColor: '#FF3B30',
     padding: 5,
     borderRadius: 5
+  },
+  Rwxctpor: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  YzDqgQHm: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  tCWNLqNq: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default AddPropertyScreen;
