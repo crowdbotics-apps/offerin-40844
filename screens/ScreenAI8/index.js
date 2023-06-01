@@ -43,7 +43,9 @@ const SignInScreen = () => {
           }}><Text style={styles.signInButtonText}>Sign In</Text></Pressable>
         </TouchableOpacity>
         <TouchableOpacity style={styles.googleButton}>
-          <Text style={styles.googleButtonText}>Sign in via Google</Text>
+          <Pressable onPress={() => {
+            navigation.navigate("ScreenAI15");
+          }}><Text style={styles.googleButtonText}>Sign in via Google</Text></Pressable>
         </TouchableOpacity>
         <TouchableOpacity style={styles.facebookButton}>
           <Text style={styles.facebookButtonText}>Sign in via Facebook</Text>
