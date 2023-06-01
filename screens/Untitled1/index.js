@@ -14,7 +14,9 @@ const Untitled1 = () => {
       flex: 1
     }}><Pressable onPress={() => {
         navigation.navigate("ScreenAI3");
-      }}><Text style={styles.EzkLTXZp}>{"Select User Type"}</Text></Pressable><Text style={styles.xavCelRr}>{"Login"}</Text><Pressable onPress={() => {
+      }}><Text style={styles.EzkLTXZp}>{"Select User Type"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("ScreenAI8");
+      }}><Text style={styles.xavCelRr}>{"Login"}</Text></Pressable><Pressable onPress={() => {
         navigation.navigate("ScreenAI7");
       }}><Text style={styles.cahvTMHI}>{"Sign Up For Free"}</Text></Pressable><Pressable onPress={() => {
         navigation.navigate("ScreenAI5");
