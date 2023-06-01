@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const PropertyOfferScreen = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerText}>Property Offer ID</Text>
@@ -37,7 +40,9 @@ const PropertyOfferScreen = () => {
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>People</Text>
         <Text style={styles.sectionText}>Buyer’s real estate agent name</Text>
-        <Text style={styles.sectionText}>Buyer’s name</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI20");
+      }}><Text style={styles.sectionText}>{"Approval Required"}</Text></Pressable>
       </View>
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Financial</Text>
