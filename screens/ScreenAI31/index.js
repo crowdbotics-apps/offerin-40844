@@ -1,10 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView, Image } from 'react-native';
 
 const ScreenComponent = () => {
-  const [offer, setOffer] = useState('');
-  const [name, setName] = useState('');
+  const navigation = useNavigation();
   const [price, setPrice] = useState('');
   const [earnestMoney, setEarnestMoney] = useState('');
   const [closingDate, setClosingDate] = useState('');
@@ -74,7 +75,9 @@ const ScreenComponent = () => {
           <Text style={_styles.uuutWwiB}>Previous</Text>
         </TouchableOpacity>
       </View>
-    </ScrollView>;
+    <Pressable onPress={() => {
+      navigation.navigate("ScreenAI32");
+    }}><Text style={_styles.YkKkmvOF}>{"Submit Offer"}</Text></Pressable></ScrollView>;
 };
 
 export default ScreenComponent;
@@ -321,5 +324,12 @@ const _styles = StyleSheet.create({
     color: "#000",
     textAlign: "center",
     fontSize: 18
+  },
+  YkKkmvOF: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
