@@ -19,7 +19,9 @@ const PropertyOfferScreen = () => {
       }}><Text style={styles.buttonText}>Notes</Text></Pressable>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Share</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI26");
+      }}><Text style={styles.buttonText}>Share</Text></Pressable>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Pressable onPress={() => {
