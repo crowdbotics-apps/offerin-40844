@@ -19,7 +19,9 @@ const ProfileScreen = () => {
         <Text style={styles.buttonText}>Subscription</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Unsubscribe</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI37");
+      }}><Text style={styles.buttonText}>{"Account Settings 2"}</Text></Pressable>
       </TouchableOpacity>
       <View style={styles.toggleContainer}>
         <Text style={styles.toggleText}>Notifications</Text>
