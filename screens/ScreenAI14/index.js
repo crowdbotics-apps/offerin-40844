@@ -52,7 +52,9 @@ const ScreenComponent = () => {
         </TouchableOpacity>
       <Pressable onPress={() => {
         navigation.navigate("ScreenAI33");
-      }}><Text style={styles.caynvQcE}>{"Settings"}</Text></Pressable></View>
+      }}><Text style={styles.caynvQcE}>{"Settings"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("ScreenAI52");
+      }}><Text style={styles.WXNejSZF}>{"Search"}</Text></Pressable></View>
       <View style={styles.bottomNavigation}>
         <Image source={{
         uri: 'https://tinyurl.com/42evm3m3'
@@ -215,6 +217,13 @@ const styles = StyleSheet.create({
     height: 20
   },
   caynvQcE: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  WXNejSZF: {
     width: 100,
     height: 50,
     lineHeight: 14,

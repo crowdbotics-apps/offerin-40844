@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -13,14 +16,16 @@ const ScreenComponent = () => {
   };
 
   return <View style={styles.container}>
-      <View style={styles.header}>
+      <Pressable onPress={() => {
+      navigation.navigate("ScreenAI53");
+    }}><View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image source={{
-          uri: 'https://tinyurl.com/42evm3m3'
-        }} style={styles.backButton} />
+            uri: 'https://tinyurl.com/42evm3m3'
+          }} style={styles.backButton} />
         </TouchableOpacity>
         <TextInput style={styles.searchBar} placeholder="Filter" value={searchQuery} onChangeText={text => setSearchQuery(text)} onSubmitEditing={handleSearch} />
-      </View>
+      </View></Pressable>
       <View style={styles.addressContainer}>
         <Text style={styles.addressText}>Address:</Text>
         <Text style={styles.addressValue}>123 Main St, Anytown USA</Text>
