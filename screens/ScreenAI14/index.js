@@ -40,7 +40,9 @@ const ScreenComponent = () => {
           <Text style={styles.listingText}>Listing 3</Text>
         </View>
         <TouchableOpacity style={styles.addButton}>
-          <Text style={styles.addButtonText}>Add A Property</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI17");
+        }}><Text style={styles.addButtonText}>Add A Property</Text></Pressable>
         </TouchableOpacity>
         <TouchableOpacity style={styles.submitButton}>
           <Text style={styles.submitButtonText}>Submit An Offer</Text>

@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, ScrollView, Picker } from 'react-native';
 
 const AddPropertyScreen = () => {
+  const navigation = useNavigation();
   const [status, setStatus] = useState('');
   const [image, setImage] = useState('https://tinyurl.com/42evm3m3');
   const [sellers, setSellers] = useState([{
@@ -27,10 +30,10 @@ const AddPropertyScreen = () => {
   const handleAddSeller = () => {// Add seller logic here
   };
 
-  const handleEditSeller = id => {// Edit seller logic here
+  const handleEditSeller = () => {// Edit seller logic here
   };
 
-  const handleRemoveSeller = id => {// Remove seller logic here
+  const handleRemoveSeller = () => {// Remove seller logic here
   };
 
   return <ScrollView style={styles.container}>
@@ -53,7 +56,9 @@ const AddPropertyScreen = () => {
       <View style={styles.formGroup}>
         <Text style={styles.label}>Add a Seller</Text>
         <TouchableOpacity onPress={handleAddSeller} style={styles.button}>
-          <Text style={styles.buttonText}>Add Seller</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI18");
+        }}><Text style={styles.buttonText}>Add Seller</Text></Pressable>
         </TouchableOpacity>
       </View>
       <View style={styles.sellers}>
