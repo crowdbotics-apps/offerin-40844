@@ -38,7 +38,9 @@ const PropertyOfferScreen = () => {
         <Text style={styles.buttonText}>Approve This Offer To Send To Seller(s)</Text>
       </TouchableOpacity>
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>People</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI22");
+      }}><Text style={styles.sectionTitle}>{"Back To Property"}</Text></Pressable>
         <Text style={styles.sectionText}>Buyer’s real estate agent name</Text>
         <Pressable onPress={() => {
         navigation.navigate("ScreenAI20");
@@ -100,7 +102,7 @@ const PropertyOfferScreen = () => {
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Back To Property</Text>
       </TouchableOpacity>
-    </View>;
+    <Text style={styles.fVuHifJS}>Lorem ipsum…</Text><Text style={styles.bdKSuibL}>Lorem ipsum…</Text><Text style={styles.lTtOOWxt}>Lorem ipsum…</Text></View>;
 };
 
 const styles = StyleSheet.create({
@@ -195,6 +197,27 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#007AFF',
     borderRadius: 5
+  },
+  fVuHifJS: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  bdKSuibL: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  lTtOOWxt: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default PropertyOfferScreen;
