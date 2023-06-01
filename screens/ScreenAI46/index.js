@@ -1,20 +1,25 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 
 const PaymentScreen = () => {
+  const navigation = useNavigation();
   const [cardholder, setCardholder] = useState('');
   const [cardNumber, setCardNumber] = useState('');
   const [expirationDate, setExpirationDate] = useState('');
   const [ccv, setCcv] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false);
-  return <View style={_styles.slozrxVF}>
+  return <Pressable onPress={() => {
+    navigation.navigate("ScreenAI44");
+  }}><View style={_styles.slozrxVF}>
       <View style={_styles.RhQnwtPW}>
         <Text style={_styles.EsaHayzE}>Choose a payment option</Text>
         <View style={_styles.MoIHZcCJ}>
           <Image source={{
-          uri: 'https://tinyurl.com/42evm3m3'
-        }} style={_styles.LeqRmzDh} />
+            uri: 'https://tinyurl.com/42evm3m3'
+          }} style={_styles.LeqRmzDh} />
           <Text style={_styles.AQvvmOKy}>Credit card</Text>
         </View>
         <View style={_styles.FJMDlPlR}>
@@ -61,7 +66,7 @@ const PaymentScreen = () => {
             </View>
           </View>
         </View>}
-    </View>;
+    </View></Pressable>;
 };
 
 export default PaymentScreen;

@@ -1,13 +1,18 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const ScreenComponent = () => {
-  return <View style={styles.container}>
+  const navigation = useNavigation();
+  return <Pressable onPress={() => {
+    navigation.navigate("ScreenAI46");
+  }}><View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity>
           <Image source={{
-          uri: 'https://tinyurl.com/42evm3m3'
-        }} style={styles.backButton} />
+            uri: 'https://tinyurl.com/42evm3m3'
+          }} style={styles.backButton} />
         </TouchableOpacity>
         <Text style={styles.headerText}>Pricing Plans</Text>
       </View>
@@ -37,7 +42,7 @@ const ScreenComponent = () => {
         </TouchableOpacity>
         <Text style={styles.priceText}>Price = $27/Month</Text>
       </View>
-    </View>;
+    </View></Pressable>;
 };
 
 const styles = StyleSheet.create({

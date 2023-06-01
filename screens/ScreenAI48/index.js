@@ -1,3 +1,5 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from "react-native";
 
@@ -10,6 +12,7 @@ const BackButton = () => {
 };
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <BackButton />
       <Text style={styles.header}>Your Subscription</Text>
@@ -25,7 +28,9 @@ const ScreenComponent = () => {
       </Text>
       <Text style={styles.paymentHeader}>Payment Details</Text>
       <TouchableOpacity style={styles.paymentText}>
-        <Text style={styles.paymentText}>Add Payment Method</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI47");
+      }}><Text style={styles.paymentText}>Add Payment Method</Text></Pressable>
       </TouchableOpacity>
       <View style={styles.inputContainer}>
         <Text style={styles.inputLabel}>Card Type</Text>
@@ -48,7 +53,9 @@ const ScreenComponent = () => {
       <TouchableOpacity style={styles.upgradeButton}>
         <Text style={styles.upgradeText}>Upgrade Subscription</Text>
       </TouchableOpacity>
-    </View>;
+    <Pressable onPress={() => {
+      navigation.navigate("ScreenAI49");
+    }}><Text style={styles.fqIALGKN}>{"Upgrade Subscription"}</Text></Pressable></View>;
 };
 
 const styles = StyleSheet.create({
@@ -142,6 +149,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center"
+  },
+  fqIALGKN: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default ScreenComponent;

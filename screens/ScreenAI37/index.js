@@ -35,7 +35,9 @@ const ProfileScreen = () => {
           <Text style={styles.sectionText}>500</Text>
         </View>
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Subscription</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI48");
+        }}><Text style={styles.sectionTitle}>Subscription</Text></Pressable>
           <Text style={styles.sectionText}>Active</Text>
         </View>
       </View>
