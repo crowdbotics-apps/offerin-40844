@@ -16,7 +16,9 @@ const Untitled1 = () => {
         navigation.navigate("ScreenAI3");
       }}><Text style={styles.EzkLTXZp}>{"Select User Type"}</Text></Pressable><Text style={styles.xavCelRr}>{"Login"}</Text><Text style={styles.cahvTMHI}>{"Sign Up For Free"}</Text><Pressable onPress={() => {
         navigation.navigate("ScreenAI5");
-      }}><Text style={styles.tgkpTkyq}>{"About us"}</Text></Pressable><Text style={styles.GjLdfHxW}>{"FAQ"}</Text><Text style={styles.RMbOdBoo}>{" Search Bar "}</Text><Text style={styles.lFlMFWXh}>{"Contact us"}</Text><Text style={styles.TKvXLbSW}>{"Dashboard"}</Text></ScrollView>
+      }}><Text style={styles.tgkpTkyq}>{"About us"}</Text></Pressable><Text style={styles.GjLdfHxW}>{"FAQ"}</Text><Text style={styles.RMbOdBoo}>{" Search Bar "}</Text><Text style={styles.lFlMFWXh}>{"Contact us"}</Text><Text style={styles.TKvXLbSW}>{"Dashboard"}</Text><Pressable onPress={() => {
+        navigation.navigate("ScreenAI2");
+      }}><Text style={styles.NPaVITVD}>{"Support/Send Feedback"}</Text></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -74,6 +76,13 @@ const styles = StyleSheet.create({
     borderRadius: 0
   },
   TKvXLbSW: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  NPaVITVD: {
     width: 100,
     height: 50,
     lineHeight: 14,
