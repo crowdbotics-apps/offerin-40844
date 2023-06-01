@@ -17,11 +17,15 @@ const ProfileScreen = () => {
       </View>
       <View style={styles.content}>
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Fees</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI39");
+        }}><Text style={styles.sectionTitle}>Fees</Text></Pressable>
           <Text style={styles.sectionText}>$50/month</Text>
         </View>
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Commissions</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI41");
+        }}><Text style={styles.sectionTitle}>Commissions</Text></Pressable>
           <Text style={styles.sectionText}>10%</Text>
         </View>
         <View style={styles.section}>

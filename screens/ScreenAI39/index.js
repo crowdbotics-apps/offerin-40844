@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <TouchableOpacity style={styles.backButton}>
         <Image source={{
@@ -12,7 +15,9 @@ const ScreenComponent = () => {
       <Text style={styles.subHeaderText}>Account Admins can create custom title fees to calculate the sellers costs in offers.</Text>
       <Text style={styles.subHeaderText}>Changes you make here WILL impact title fees on existing properties or existing offers for all users on the account.</Text>
       <TouchableOpacity style={styles.addButton}>
-        <Text style={styles.addButtonText}>Add Title Fee Structure</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI40");
+      }}><Text style={styles.addButtonText}>Add Title Fee Structure</Text></Pressable>
       </TouchableOpacity>
     </View>;
 };
