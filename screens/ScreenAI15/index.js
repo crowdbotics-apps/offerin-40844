@@ -1,8 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   const [buyerNames, setBuyerNames] = useState([]);
   const [titleCompany, setTitleCompany] = useState('');
   const [realEstateAgent, setRealEstateAgent] = useState({
@@ -52,10 +55,18 @@ const ScreenComponent = () => {
         uri: 'https://tinyurl.com/42evm3m3'
       }} style={_styles.mTUlOGqD} />
         <View style={_styles.yPaUanlI}>
-          <Text style={_styles.gLiqrHnF}>Address</Text>
-          <Text>City (Pre-Filled)</Text>
-          <Text>State (Pre-Filled)</Text>
-          <Text>Zip (Pre-Filled)</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI28");
+        }}><Text style={_styles.gLiqrHnF}>{"Financial"}</Text></Pressable>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI29");
+        }}><Text>{"Dates & Inspection"}</Text></Pressable>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI30");
+        }}><Text>{"Document"}</Text></Pressable>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI31");
+        }}><Text>{"Review"}</Text></Pressable>
           <Text style={_styles.DlDxuHmT}>Listing Agent</Text>
           <Text>Name</Text>
           <Text>Email</Text>
