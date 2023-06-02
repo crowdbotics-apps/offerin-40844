@@ -1,8 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, Switch } from 'react-native';
 
 const PropertyDetailsScreen = () => {
+  const navigation = useNavigation();
   return <View style={_styles.bGkAobzr}>
       <View style={_styles.giXhhARu}>
         <TouchableOpacity>
@@ -32,7 +35,9 @@ const PropertyDetailsScreen = () => {
           </View>
         </View>
         <View style={_styles.WzzEQGXC}>
-          <Text style={_styles.yrluukpm}>Property Image</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI56");
+        }}><Text style={_styles.yrluukpm}>{"Property Category"}</Text></Pressable>
           <Image source={{
           uri: 'https://tinyurl.com/42evm3m3'
         }} style={_styles.iDLAGyIf} />

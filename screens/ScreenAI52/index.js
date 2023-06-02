@@ -35,7 +35,9 @@ const ScreenComponent = () => {
         <Text style={styles.agentValue}>John Doe</Text>
       </View>
       <View style={styles.listingsContainer}>
-        <Text style={styles.listingsTitle}>Agent & Account Listings:</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI54");
+      }}><Text style={styles.listingsTitle}>Agent & Account Listings:</Text></Pressable>
         <TouchableOpacity onPress={() => handleItemClick('item1')}>
           <Text style={styles.listingItem}>Listing Item 1</Text>
         </TouchableOpacity>
@@ -55,7 +57,9 @@ const ScreenComponent = () => {
       <TouchableOpacity style={styles.moreButton}>
         <Text style={styles.moreButtonText}>More</Text>
       </TouchableOpacity>
-    </View>;
+    <Pressable onPress={() => {
+      navigation.navigate("ScreenAI56");
+    }}><Text style={styles.pzYkDiXZ}>{"Property Category"}</Text></Pressable></View>;
 };
 
 const styles = StyleSheet.create({
@@ -157,6 +161,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: '#fff'
+  },
+  pzYkDiXZ: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default ScreenComponent;

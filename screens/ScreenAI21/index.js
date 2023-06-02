@@ -112,7 +112,9 @@ const PropertyOfferScreen = () => {
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Back To Property</Text>
       </TouchableOpacity>
-    <Text style={styles.fVuHifJS}>Lorem ipsum…</Text><Text style={styles.bdKSuibL}>Lorem ipsum…</Text><Text style={styles.lTtOOWxt}>Lorem ipsum…</Text></View>;
+    <Text style={styles.fVuHifJS}>Lorem ipsum…</Text><Text style={styles.bdKSuibL}>Lorem ipsum…</Text><Text style={styles.lTtOOWxt}>Lorem ipsum…</Text><Text style={styles.WcVpAOjc}>Lorem ipsum…</Text><Pressable onPress={() => {
+      navigation.navigate("ScreenAI55");
+    }}><Text style={styles.vyPGsnam}>{"Property Details"}</Text></Pressable></View>;
 };
 
 const styles = StyleSheet.create({
@@ -223,6 +225,20 @@ const styles = StyleSheet.create({
     borderRadius: 0
   },
   lTtOOWxt: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  WcVpAOjc: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  vyPGsnam: {
     width: 100,
     height: 50,
     lineHeight: 14,
